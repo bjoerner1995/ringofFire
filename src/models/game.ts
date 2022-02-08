@@ -4,8 +4,8 @@ export class Game{
 
 
     public players: string[] = [  ];
-    public stack: string[] = [];
-    public playedCard: any ; 
+    public stack:  any = [];
+    public playedCard: string[] = [] ; 
     public currentPlayer: number = 0;
 
 
@@ -13,15 +13,15 @@ export class Game{
 
     constructor(){
         for(let i = 1; i < 14; i++ )
-       this.stack.push(`ace_${i}`),
-        this.stack.push(`clubs_${i}`),
-        this.stack.push(`diamonds_${i}`),
-       this.stack.push(`hearts_${i}`);
+       this.stack.push(`ace_`+ i),
+        this.stack.push(`clubs_` + i),
+        this.stack.push(`diamonds_`+ i),
+       this.stack.push(`hearts_` + i );
         shuffle(this.stack)
         //arrayShuffle(this.stack) 
     }
 }
-function shuffle(a: any): any[]{     
+function shuffle(a: any){     
     var j, x, i;     for (i = a.length - 1; i > 0; i--) {    
     j = Math.floor(Math.random() * (i + 1));   
     x = a[i]  

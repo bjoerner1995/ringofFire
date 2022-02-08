@@ -19,6 +19,10 @@
     width: 120px;
     }
 }
+.played-Card{
+    right: 25px;
+    transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg) ;
+}
 .top-card{
     right: 25px;
     cursor: pointer;
@@ -28,6 +32,10 @@
     &:hover{
         transform: scale(1.1) translateY(-10px);
     }
+}
+.currentCard{
+    right: 25px;
+    transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg) ;
 }
 .pick-card{
     right: 25px;
@@ -48,4 +56,24 @@
 100% {
     transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg) ;
 }
+}
+.player-postion{
+    position: absolute;
+    right: 0;
+}
+.btn-add{
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+.pin-bottom{
+    position: absolute;
+    bottom: 32px;
+    right: 100px;
+    left: 100px;
+}
+.btn-restart{
+    position: absolute;
+    right: 32px;
+    bottom: 100px;
 }
