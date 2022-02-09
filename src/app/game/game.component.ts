@@ -33,8 +33,11 @@ export class GameComponent  implements OnInit {
 
 
   }
+
   takeCard(){
-    if(!this.pickCardAnimation ){   
+   
+   
+    if(!this.pickCardAnimation  && this.game.players.length ==  1 ){   
     this.currentCard = this.game.stack.pop();
     this.pickCardAnimation = true;
     console.log(this.currentCard)
@@ -45,7 +48,9 @@ export class GameComponent  implements OnInit {
       this.game.playedCard.push(this.currentCard);
       this.pickCardAnimation = false;
     },1000)
-  }
+} else {
+  alert("lleine trinken macht kein Spaß")
+}
 }
 
 
@@ -54,9 +59,9 @@ openDialog(): void {
   
 
   dialogRef.afterClosed().subscribe(name => {
-   
+   if(name && name.length >0){    
     this.game.players.push(name);
-   
+  }
   });
 
 }
